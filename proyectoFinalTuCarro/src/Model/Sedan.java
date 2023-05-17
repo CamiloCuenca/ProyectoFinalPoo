@@ -1,6 +1,6 @@
 package Model;
 
 public class Sedan {
-    private 
-    
-}
+
+    private String marca; 
+} 
