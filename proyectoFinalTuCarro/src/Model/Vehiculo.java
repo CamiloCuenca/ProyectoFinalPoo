@@ -24,5 +24,6 @@ public abstract class Vehiculo {
     private int cambios;
     private int velocidadMaxima;
     private int cilindraje;
+    
 
 }
