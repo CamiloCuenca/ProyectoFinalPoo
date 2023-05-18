@@ -5,7 +5,8 @@ public abstract class Sedan extends Vehiculo {
     private int numPuertas;
     private int capMaletero;
 
-    public Sedan(int numPasajeros, int numPuertas, int capMaletero ,TipoCombustible tipoCombustible, TipoTrasmision tipoTrasmision, EsNuevo esNuevo,
+    public Sedan(int numPasajeros, int numPuertas, int capMaletero, TipoCombustible tipoCombustible,
+            TipoTrasmision tipoTrasmision, EsNuevo esNuevo,
             TieneAireAcondicionado tieneAireAcondicionado, TieneCapReversa tieneCapReversa,
             TieneVelCrucero tieneVelCrucero, TieneABS tieneABS, TieneSensoresColision tieneSensoresColision,
             TieneSensoresCrucero tieneSensoresCrucero, TieneAssiPermanencia tieneAssiPermanencia, String marca,
@@ -15,11 +16,9 @@ public abstract class Sedan extends Vehiculo {
                 tieneSensoresColision, tieneSensoresCrucero, tieneAssiPermanencia, marca, modelo, cambios,
                 velocidadMaxima,
                 cilindraje, numBolsasAire);
-                this.numPasajeros = numPasajeros;
-                this.numPuertas = numPuertas;
-                this.capMaletero = capMaletero;
-
-    
+        this.numPasajeros = numPasajeros;
+        this.numPuertas = numPuertas;
+        this.capMaletero = capMaletero;
 
     }
 
