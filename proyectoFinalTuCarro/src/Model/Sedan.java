@@ -21,4 +21,28 @@ public abstract class Sedan extends Vehiculo {
 
     }
 
+    public int getNumPasajeros() {
+        return numPasajeros;
+    }
+
+    public void setNumPasajeros(int numPasajeros) {
+        this.numPasajeros = numPasajeros;
+    }
+
+    public int getNumPuertas() {
+        return numPuertas;
+    }
+
+    public void setNumPuertas(int numPuertas) {
+        this.numPuertas = numPuertas;
+    }
+
+    public int getCapMaletero() {
+        return capMaletero;
+    }
+
+    public void setCapMaletero(int capMaletero) {
+        this.capMaletero = capMaletero;
+    }
+
 }
