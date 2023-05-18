@@ -1,61 +1,61 @@
 package Model;
 
 public abstract class Vehiculo {
-    private enum TipoCombustible {
+    public enum TipoCombustible {
         GASOLINA, DISEL, ELECTRICO, HIBRIDO
     };
 
     TipoCombustible tipoCombustible;
 
-    private enum TipoTrasmision {
+    public enum TipoTrasmision {
         MANUAL, AUTOMATICO
     };
 
     TipoTrasmision tipoTrasmision;
 
-    private enum EsNuevo {
+    public enum EsNuevo {
         SI, NO
     };
 
     EsNuevo esNuevo;
 
-    private enum TieneAireAcondicionado {
+    public enum TieneAireAcondicionado {
         SI, NO
     }
 
     TieneAireAcondicionado tieneAireAcondicionado;
 
-    private enum TieneCapReversa {
+    public enum TieneCapReversa {
         SI, NO
     }
 
     TieneCapReversa tieneCapReversa;
 
-    private enum TieneVelCrucero {
+    public enum TieneVelCrucero {
         SI, NO
     };
 
     TieneVelCrucero tieneVelCrucero;
 
-    private enum TieneABS {
+    public enum TieneABS {
         SI, NO
     };
 
     TieneABS tieneABS;
 
-    private enum TieneSensoresColision {
+    public enum TieneSensoresColision {
         SI, NO
     };
 
     TieneSensoresColision tieneSensoresColision;
 
-    private enum TieneSensoresCrucero {
+    public enum TieneSensoresCrucero {
         SI, NO
     };
 
     TieneSensoresCrucero tieneSensoresCrucero;
 
-    private enum TieneAssiPermanencia {
+    public enum TieneAssiPermanencia {
         SI, NO
     };
 
