@@ -1,6 +1,13 @@
 package Model;
 
 public abstract class Vehiculo {
+    private String marca;
+    private String modelo;
+    private int cambios;
+    private int velocidadMaxima;
+    private int cilindraje;
+    private int numBolsasAire;
+
     public enum TipoCombustible {
         GASOLINA, DISEL, ELECTRICO, HIBRIDO
     };
@@ -61,18 +68,17 @@ public abstract class Vehiculo {
 
     TieneAssiPermanencia tieneAssiPermanencia;
 
-    private String marca;
-    private String modelo;
-    private int cambios;
-    private int velocidadMaxima;
-    private int cilindraje;
-    private int numBolsasAire;
-
-    public Vehiculo(TipoCombustible tipoCombustible, TipoTrasmision tipoTrasmision, EsNuevo esNuevo,
+    public Vehiculo(String marca, String modelo, int cambios, int velocidadMaxima, int cilindraje, int numBolsasAire,
+            TipoCombustible tipoCombustible, TipoTrasmision tipoTrasmision, EsNuevo esNuevo,
             TieneAireAcondicionado tieneAireAcondicionado, TieneCapReversa tieneCapReversa,
             TieneVelCrucero tieneVelCrucero, TieneABS tieneABS, TieneSensoresColision tieneSensoresColision,
-            TieneSensoresCrucero tieneSensoresCrucero, TieneAssiPermanencia tieneAssiPermanencia, String marca,
-            String modelo, int cambios, int velocidadMaxima, int cilindraje, int numBolsasAire) {
+            TieneSensoresCrucero tieneSensoresCrucero, TieneAssiPermanencia tieneAssiPermanencia) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.cambios = cambios;
+        this.velocidadMaxima = velocidadMaxima;
+        this.cilindraje = cilindraje;
+        this.numBolsasAire = numBolsasAire;
         this.tipoCombustible = tipoCombustible;
         this.tipoTrasmision = tipoTrasmision;
         this.esNuevo = esNuevo;
@@ -83,11 +89,56 @@ public abstract class Vehiculo {
         this.tieneSensoresColision = tieneSensoresColision;
         this.tieneSensoresCrucero = tieneSensoresCrucero;
         this.tieneAssiPermanencia = tieneAssiPermanencia;
+    }
+
+    @Override
+    public abstract String toString();
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
         this.marca = marca;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(String modelo) {
         this.modelo = modelo;
+    }
+
+    public int getCambios() {
+        return cambios;
+    }
+
+    public void setCambios(int cambios) {
         this.cambios = cambios;
+    }
+
+    public int getVelocidadMaxima() {
+        return velocidadMaxima;
+    }
+
+    public void setVelocidadMaxima(int velocidadMaxima) {
         this.velocidadMaxima = velocidadMaxima;
+    }
+
+    public int getCilindraje() {
+        return cilindraje;
+    }
+
+    public void setCilindraje(int cilindraje) {
         this.cilindraje = cilindraje;
+    }
+
+    public int getNumBolsasAire() {
+        return numBolsasAire;
+    }
+
+    public void setNumBolsasAire(int numBolsasAire) {
         this.numBolsasAire = numBolsasAire;
     }
 
@@ -169,54 +220,6 @@ public abstract class Vehiculo {
 
     public void setTieneAssiPermanencia(TieneAssiPermanencia tieneAssiPermanencia) {
         this.tieneAssiPermanencia = tieneAssiPermanencia;
-    }
-
-    public String getMarca() {
-        return marca;
-    }
-
-    public void setMarca(String marca) {
-        this.marca = marca;
-    }
-
-    public String getModelo() {
-        return modelo;
-    }
-
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
-    }
-
-    public int getCambios() {
-        return cambios;
-    }
-
-    public void setCambios(int cambios) {
-        this.cambios = cambios;
-    }
-
-    public int getVelocidadMaxima() {
-        return velocidadMaxima;
-    }
-
-    public void setVelocidadMaxima(int velocidadMaxima) {
-        this.velocidadMaxima = velocidadMaxima;
-    }
-
-    public int getCilindraje() {
-        return cilindraje;
-    }
-
-    public void setCilindraje(int cilindraje) {
-        this.cilindraje = cilindraje;
-    }
-
-    public int getNumBolsasAire() {
-        return numBolsasAire;
-    }
-
-    public void setNumBolsasAire(int numBolsasAire) {
-        this.numBolsasAire = numBolsasAire;
     }
 
 }

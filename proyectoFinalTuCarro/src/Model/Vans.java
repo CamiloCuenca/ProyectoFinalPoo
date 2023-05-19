@@ -1,8 +1,8 @@
 package Model;
 
-public class Sedan extends Automovil {
+public class Vans extends Automovil {
 
-    public Sedan(int numPasajeros, int numPuertas, int capMaletero, String marca, String modelo, int cambios,
+    public Vans(int numPasajeros, int numPuertas, int capMaletero, String marca, String modelo, int cambios,
             int velocidadMaxima, int cilindraje, int numBolsasAire, TipoCombustible tipoCombustible,
             TipoTrasmision tipoTrasmision, EsNuevo esNuevo, TieneAireAcondicionado tieneAireAcondicionado,
             TieneCapReversa tieneCapReversa, TieneVelCrucero tieneVelCrucero, TieneABS tieneABS,
@@ -16,7 +16,7 @@ public class Sedan extends Automovil {
 
     @Override
     public String toString() {
-        String v = "Sedan" + ", '\nmarca:" + getMarca() + ", \nmodelo: "
+        String v = "Vans" + ", '\nmarca:" + getMarca() + ", \nmodelo: "
                 + getModelo()
                 + ", \ncambios: " + getCambios() + ", \nvelocidadMaxima: " + getVelocidadMaxima() + ", \ncilindraje: "
                 + getCilindraje()
@@ -29,7 +29,8 @@ public class Sedan extends Automovil {
                 + ", \ntieneSensoresCrucero: " + tieneSensoresCrucero + ", \ntieneAssiPermanencia: "
                 + tieneAssiPermanencia;
         return v;
-
     }
+
+    
 
 }
