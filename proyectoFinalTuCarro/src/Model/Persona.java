@@ -18,7 +18,21 @@ public abstract class Persona {
 		this.correo = correo;
 		this.contraseña = contraseña;
 	}
+	
+
+
+
 	//Get and Set
+
+	
+
+
+	public Persona() {
+		// TODO Auto-generated constructor stub
+	}
+
+
+
 
 	public String getNombre() {
 		return nombre;

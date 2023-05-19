@@ -44,17 +44,22 @@ public class Empleados  extends Persona{
 	
 	
 	//Metodos
-	public void registrarCliente( String nombre , String apellido , String cedula , String correo , String Contraseña ) {
-		
-		for(int i =0;i<clientes.size();i++) {
-			
-			clientes.add(new Cliente(nombre, apellido, cedula, correo, Contraseña));
-		}	
+//	public void registrarCliente( String nombre , String apellido , String cedula , String correo , String Contraseña ) {
+//		
+//		for(int i =0;i<clientes.size();i++) {
+//			
+//			clientes.add(new Cliente(nombre, apellido, cedula, correo, Contraseña));
+//		}	
+//	}
+	
+	
+	
+	public ArrayList<Cliente> registrarCliente(Cliente cliente){
+		clientes = new ArrayList<Cliente>();
+		clientes.add(cliente);
+		return clientes;
 	}
 	
-	public void registrarVehiculo() {
-		
-	}
 	
 	
 	
