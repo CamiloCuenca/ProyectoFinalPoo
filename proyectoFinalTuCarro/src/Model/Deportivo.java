@@ -1,10 +1,11 @@
 package Model;
 
-public class Sedan extends Automovil {
-    private int capMaletero;
+public class Deportivo extends Automovil {
+    private int caballosDeFuerza;
+    private double tiempo100kl;
 
-    public Sedan(int capMaletero, String marca, String modelo, String numPlaca, int cambios, int velocidadMaxima,
-            int cilindraje,
+    public Deportivo(int caballosDeFuerza, double tiempo100kl, String marca, String modelo, String numPlaca,
+            int cambios, int velocidadMaxima, int cilindraje,
             String[] fotos, TipoCombustible tipoCombustible, TipoTrasmision tipoTrasmision, EsNuevo esNuevo,
             TieneABS tieneABS, Disponibilidad disponibilidad, int numerosPasajeros, int numeroPuertas, int numBolasAire,
             TieneCamaraReversa tieneCamaraReversa, TieneAireAcondicionado tieneAireAcondicionado,
@@ -15,7 +16,9 @@ public class Sedan extends Automovil {
                 tieneABS, disponibilidad, numerosPasajeros, numeroPuertas, numBolasAire, tieneCamaraReversa,
                 tieneAireAcondicionado, tieneVelocidadCrucero, tieneSensorColision, tIeneSensorCruzado,
                 tieneAsistentePerCarril);
-        this.capMaletero = capMaletero;
+        this.caballosDeFuerza = caballosDeFuerza;
+        this.tiempo100kl = tiempo100kl;
+
     }
 
     @Override
@@ -40,18 +43,29 @@ public class Sedan extends Automovil {
                 + getTieneVelocidadCrucero() + ", \nSensor Colisión: "
                 + getTieneSensorColision() + ", \nSensor Cruzado: "
                 + gettIeneSensorCruzado() + ", \nAsistente de Permanencia: "
-                + getTieneAsistentePerCarril() + ", \nCapacidad Maletero: "
-                + capMaletero;
+                + getTieneAsistentePerCarril() + ", \nCaballos de Fuerza: "
+                + caballosDeFuerza + ", \nTiempo para 100kl: "
+                + tiempo100kl;
 
         return v;
+
     }
 
-    public int getCapMaletero() {
-        return capMaletero;
+    public int getCaballosDeFuerza() {
+        return caballosDeFuerza;
     }
 
-    public void setCapMaletero(int capMaletero) {
-        this.capMaletero = capMaletero;
+    public void setCaballosDeFuerza(int caballosDeFuerza) {
+        this.caballosDeFuerza = caballosDeFuerza;
     }
 
+    public double getTiempo100kl() {
+        return tiempo100kl;
+    }
+
+    public void setTiempo100kl(double tiempo100kl) {
+        this.tiempo100kl = tiempo100kl;
+    }
+    
+    
 }

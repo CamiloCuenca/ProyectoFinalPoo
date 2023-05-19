@@ -35,7 +35,7 @@ public abstract class Automovil extends Vehiculo {
 
     TIeneSensorCruzado tIeneSensorCruzado;
 
-    private enum TieneAsistentePerCarril {
+    public enum TieneAsistentePerCarril {
         SI, NO
     };
 
@@ -43,10 +43,21 @@ public abstract class Automovil extends Vehiculo {
 
     public Automovil(String marca, String modelo, String numPlaca, int cambios, int velocidadMaxima, int cilindraje,
             String[] fotos, TipoCombustible tipoCombustible, TipoTrasmision tipoTrasmision, EsNuevo esNuevo,
-            TieneABS tieneABS, Disponibilidad disponibilidad) {
+            TieneABS tieneABS, Disponibilidad disponibilidad, int numerosPasajeros, int numeroPuertas, int numBolasAire,
+            TieneCamaraReversa tieneCamaraReversa, TieneAireAcondicionado tieneAireAcondicionado,
+            TieneVelocidadCrucero tieneVelocidadCrucero, TieneSensorColision tieneSensorColision,
+            TIeneSensorCruzado tIeneSensorCruzado, TieneAsistentePerCarril tieneAsistentePerCarril) {
         super(marca, modelo, numPlaca, cambios, velocidadMaxima, cilindraje, fotos, tipoCombustible, tipoTrasmision,
-                esNuevo,
-                tieneABS, disponibilidad);
+                esNuevo, tieneABS, disponibilidad);
+        this.numerosPasajeros = numerosPasajeros;
+        this.numeroPuertas = numeroPuertas;
+        this.numBolasAire = numBolasAire;
+        this.tieneCamaraReversa = tieneCamaraReversa;
+        this.tieneAireAcondicionado = tieneAireAcondicionado;
+        this.tieneVelocidadCrucero = tieneVelocidadCrucero;
+        this.tieneSensorColision = tieneSensorColision;
+        this.tIeneSensorCruzado = tIeneSensorCruzado;
+        this.tieneAsistentePerCarril = tieneAsistentePerCarril;
     }
 
     @Override
