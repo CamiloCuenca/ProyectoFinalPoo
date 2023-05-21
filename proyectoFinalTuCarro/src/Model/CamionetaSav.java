@@ -1,26 +1,25 @@
 package Model;
 
-public class Sedan extends AbsAutomovil {
+public class CamionetaSav extends AbsCamioneta{
     private int capMaletero;
 
-    public Sedan(int capMaletero, String marca, String modelo, String numPlaca, int cambios, int velocidadMaxima,
-            int cilindraje,
+    public CamionetaSav(int capMaletero,String marca, String modelo, String numPlaca, int cambios, int velocidadMaxima, int cilindraje,
             String[] fotos, TipoCombustible tipoCombustible, TipoTrasmision tipoTrasmision, EsNuevo esNuevo,
-            TieneABS tieneABS, Disponibilidad disponibilidad, int numerosPasajeros, int numeroPuertas, int numBolasAire,
-            TieneCamaraReversa tieneCamaraReversa, TieneAireAcondicionado tieneAireAcondicionado,
-            TieneVelocidadCrucero tieneVelocidadCrucero, TieneSensorColision tieneSensorColision,
-            TIeneSensorCruzado tIeneSensorCruzado, TieneAsistentePerCarril tieneAsistentePerCarril) {
-        super(marca, modelo, numPlaca, cambios, velocidadMaxima, cilindraje, fotos, tipoCombustible, tipoTrasmision,
-                esNuevo,
-                tieneABS, disponibilidad, numerosPasajeros, numeroPuertas, numBolasAire, tieneCamaraReversa,
+            TieneABS tieneABS, Disponibilidad disponibilidad, int numPasajeros, int numeroPuertas, int numBolasAire,
+            EscuatroXCuatro escuatroXCuatro, TieneCamaraReversa tieneCamaraReversa,
+            TieneAireAcondicionado tieneAireAcondicionado, TieneVelocidadCrucero tieneVelocidadCrucero,
+            TieneSensorColision tieneSensorColision, TIeneSensorCruzado tIeneSensorCruzado,
+            TieneAsistentePerCarril tieneAsistentePerCarril) {
+        super(marca, modelo, numPlaca, cambios, velocidadMaxima, cilindraje, fotos, tipoCombustible, tipoTrasmision, esNuevo,
+                tieneABS, disponibilidad, numPasajeros, numeroPuertas, numBolasAire, escuatroXCuatro, tieneCamaraReversa,
                 tieneAireAcondicionado, tieneVelocidadCrucero, tieneSensorColision, tIeneSensorCruzado,
                 tieneAsistentePerCarril);
-        this.capMaletero = capMaletero;
+                this.capMaletero = capMaletero;
     }
 
     @Override
     public String toString() {
-        String v = "Sedan" + ", \nMarca: "
+        String v = "Camioneta/Sav " + ", \nMarca: "
                 + getMarca() + ", \nModelo: "
                 + getModelo() + ", \nNumero Placa: "
                 + getNumPlaca() + ", \nCambios: "
@@ -32,7 +31,7 @@ public class Sedan extends AbsAutomovil {
                 + getEsNuevo() + ", \nTiene ABS: "
                 + getTieneABS() + ", \nDisponibilidad: "
                 + getDisponibilidad() + ", \nNumero de pasajeros: "
-                + getNumerosPasajeros() + ", \nNumero de puertas: "
+                + getNumPasajeros() + ", \nNumero de puertas: "
                 + getNumeroPuertas() + ",\nNumero de bolsas de aire: "
                 + getNumBolasAire() + ", \nCamara de Reversa: "
                 + getTieneCamaraReversa() + ", \nAire Acondicionado: "
@@ -46,6 +45,8 @@ public class Sedan extends AbsAutomovil {
         return v;
     }
 
+    
+
     public int getCapMaletero() {
         return capMaletero;
     }
@@ -54,4 +55,6 @@ public class Sedan extends AbsAutomovil {
         this.capMaletero = capMaletero;
     }
 
+    
+    
 }

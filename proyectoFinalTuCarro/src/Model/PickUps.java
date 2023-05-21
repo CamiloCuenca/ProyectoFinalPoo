@@ -1,29 +1,30 @@
 package Model;
 
-public class Deportivo extends AbsAutomovil {
-    private int caballosDeFuerza;
-    private double tiempo100kl;
+public class PickUps extends AbsCamioneta {
+    private int capacidadCajaCarga;
 
-    public Deportivo(int caballosDeFuerza, double tiempo100kl, String marca, String modelo, String numPlaca,
-            int cambios, int velocidadMaxima, int cilindraje,
+    public PickUps(int capacidadCajaCarga, String marca, String modelo, String numPlaca, int cambios,
+            int velocidadMaxima,
+            int cilindraje,
             String[] fotos, TipoCombustible tipoCombustible, TipoTrasmision tipoTrasmision, EsNuevo esNuevo,
-            TieneABS tieneABS, Disponibilidad disponibilidad, int numerosPasajeros, int numeroPuertas, int numBolasAire,
-            TieneCamaraReversa tieneCamaraReversa, TieneAireAcondicionado tieneAireAcondicionado,
-            TieneVelocidadCrucero tieneVelocidadCrucero, TieneSensorColision tieneSensorColision,
-            TIeneSensorCruzado tIeneSensorCruzado, TieneAsistentePerCarril tieneAsistentePerCarril) {
+            TieneABS tieneABS, Disponibilidad disponibilidad, int numPasajeros, int numeroPuertas, int numBolasAire,
+            EscuatroXCuatro escuatroXCuatro, TieneCamaraReversa tieneCamaraReversa,
+            TieneAireAcondicionado tieneAireAcondicionado, TieneVelocidadCrucero tieneVelocidadCrucero,
+            TieneSensorColision tieneSensorColision, TIeneSensorCruzado tIeneSensorCruzado,
+            TieneAsistentePerCarril tieneAsistentePerCarril) {
         super(marca, modelo, numPlaca, cambios, velocidadMaxima, cilindraje, fotos, tipoCombustible, tipoTrasmision,
                 esNuevo,
-                tieneABS, disponibilidad, numerosPasajeros, numeroPuertas, numBolasAire, tieneCamaraReversa,
+                tieneABS, disponibilidad, numPasajeros, numeroPuertas, numBolasAire, escuatroXCuatro,
+                tieneCamaraReversa,
                 tieneAireAcondicionado, tieneVelocidadCrucero, tieneSensorColision, tIeneSensorCruzado,
                 tieneAsistentePerCarril);
-        this.caballosDeFuerza = caballosDeFuerza;
-        this.tiempo100kl = tiempo100kl;
+        this.capacidadCajaCarga = capacidadCajaCarga;
 
     }
 
     @Override
     public String toString() {
-        String v = "Sedan" + ", \nMarca: "
+        String v = "Camioneta/Sav " + ", \nMarca: "
                 + getMarca() + ", \nModelo: "
                 + getModelo() + ", \nNumero Placa: "
                 + getNumPlaca() + ", \nCambios: "
@@ -35,7 +36,7 @@ public class Deportivo extends AbsAutomovil {
                 + getEsNuevo() + ", \nTiene ABS: "
                 + getTieneABS() + ", \nDisponibilidad: "
                 + getDisponibilidad() + ", \nNumero de pasajeros: "
-                + getNumerosPasajeros() + ", \nNumero de puertas: "
+                + getNumPasajeros() + ", \nNumero de puertas: "
                 + getNumeroPuertas() + ",\nNumero de bolsas de aire: "
                 + getNumBolasAire() + ", \nCamara de Reversa: "
                 + getTieneCamaraReversa() + ", \nAire Acondicionado: "
@@ -43,28 +44,18 @@ public class Deportivo extends AbsAutomovil {
                 + getTieneVelocidadCrucero() + ", \nSensor Colisión: "
                 + getTieneSensorColision() + ", \nSensor Cruzado: "
                 + gettIeneSensorCruzado() + ", \nAsistente de Permanencia: "
-                + getTieneAsistentePerCarril() + ", \nCaballos de Fuerza: "
-                + caballosDeFuerza + ", \nTiempo para 100kl: "
-                + tiempo100kl;
+                + getTieneAsistentePerCarril() + ", \nCapacidad Caja de Carga: "
+                + capacidadCajaCarga;
 
         return v;
-
     }
 
-    public int getCaballosDeFuerza() {
-        return caballosDeFuerza;
+    public int getCapacidadCajaCarga() {
+        return capacidadCajaCarga;
     }
 
-    public void setCaballosDeFuerza(int caballosDeFuerza) {
-        this.caballosDeFuerza = caballosDeFuerza;
-    }
-
-    public double getTiempo100kl() {
-        return tiempo100kl;
-    }
-
-    public void setTiempo100kl(double tiempo100kl) {
-        this.tiempo100kl = tiempo100kl;
+    public void setCapacidadCajaCarga(int capacidadCajaCarga) {
+        this.capacidadCajaCarga = capacidadCajaCarga;
     }
 
 }

@@ -1,6 +1,6 @@
 package Model;
 
-public abstract class Automovil extends Vehiculo {
+public abstract class AbsAutomovil extends Vehiculo {
     private int numerosPasajeros;
     private int numeroPuertas;
     private int numBolasAire;
@@ -41,7 +41,7 @@ public abstract class Automovil extends Vehiculo {
 
     TieneAsistentePerCarril tieneAsistentePerCarril;
 
-    public Automovil(String marca, String modelo, String numPlaca, int cambios, int velocidadMaxima, int cilindraje,
+    public AbsAutomovil(String marca, String modelo, String numPlaca, int cambios, int velocidadMaxima, int cilindraje,
             String[] fotos, TipoCombustible tipoCombustible, TipoTrasmision tipoTrasmision, EsNuevo esNuevo,
             TieneABS tieneABS, Disponibilidad disponibilidad, int numerosPasajeros, int numeroPuertas, int numBolasAire,
             TieneCamaraReversa tieneCamaraReversa, TieneAireAcondicionado tieneAireAcondicionado,
