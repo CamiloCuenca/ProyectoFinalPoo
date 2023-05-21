@@ -9,5 +9,11 @@ public class Bus extends AbsVehiculoCarga{
                 tieneABS, disponibilidad);
         //TODO Auto-generated constructor stub
     }
+
+    @Override
+    public String toString() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'toString'");
+    }
     
 }

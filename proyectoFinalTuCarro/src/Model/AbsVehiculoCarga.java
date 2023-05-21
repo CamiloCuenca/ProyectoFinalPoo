@@ -8,11 +8,22 @@ public abstract class AbsVehiculoCarga extends Vehiculo{
             TieneABS tieneABS, Disponibilidad disponibilidad) {
         super(marca, modelo, numPlaca, cambios, velocidadMaxima, cilindraje, fotos, tipoCombustible, tipoTrasmision, esNuevo,
                 tieneABS, disponibilidad);
+                this.numEjes = numEjes;
 
     }
 
     @Override
     public abstract String toString();
+
+    public int getNumEjes() {
+        return numEjes;
+    }
+
+    public void setNumEjes(int numEjes) {
+        this.numEjes = numEjes;
+    }
+
+    
     
     
     
