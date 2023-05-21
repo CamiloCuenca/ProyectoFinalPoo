@@ -15,6 +15,7 @@ public class AbsCamion extends Vehiculo{
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'toString'");
     }
+   
     
     
 }
