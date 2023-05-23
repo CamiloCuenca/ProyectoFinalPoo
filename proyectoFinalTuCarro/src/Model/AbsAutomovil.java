@@ -5,16 +5,13 @@ public abstract class AbsAutomovil extends Vehiculo {
     private int numeroPuertas;
     private int numBolasAire;
 
-    public AbsAutomovil(int numerosPasajeros, int numeroPuertas, int numBolasAire, String marca, String modelo,
-            String numPlaca, int cambios, int velocidadMaxima, int cilindraje,
+    public AbsAutomovil(String marca, String modelo, String numPlaca, int cambios, int velocidadMaxima, int cilindraje,
+            int numerosPasajeros, int numeroPuertas, int numBolasAire,
             String[] fotos, TipoCombustible tipoCombustible, TipoTrasmision tipoTrasmision, EsNuevo esNuevo,
-            TieneABS tieneABS, Disponibilidad disponibilidad) {
+            Disponibilidad disponibilidad) {
         super(marca, modelo, numPlaca, cambios, velocidadMaxima, cilindraje, fotos, tipoCombustible, tipoTrasmision,
                 esNuevo,
-                tieneABS, disponibilidad);
-        this.numerosPasajeros = numerosPasajeros;
-        this.numeroPuertas = numeroPuertas;
-        this.numBolasAire = numBolasAire;
+                disponibilidad);
     }
 
     @Override
@@ -43,7 +40,5 @@ public abstract class AbsAutomovil extends Vehiculo {
     public void setNumBolasAire(int numBolasAire) {
         this.numBolasAire = numBolasAire;
     }
-
-    
 
 }

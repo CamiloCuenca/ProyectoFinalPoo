@@ -1,51 +1,63 @@
 package Model;
 
-public class CamionetaSav extends AbsCamioneta{
+public class CamionetaSav extends AbsCamioneta {
     private int capMaletero;
 
-    public CamionetaSav(int capMaletero,String marca, String modelo, String numPlaca, int cambios, int velocidadMaxima, int cilindraje,
-            String[] fotos, TipoCombustible tipoCombustible, TipoTrasmision tipoTrasmision, EsNuevo esNuevo,
-            TieneABS tieneABS, Disponibilidad disponibilidad, int numPasajeros, int numeroPuertas, int numBolasAire,
-            EscuatroXCuatro escuatroXCuatro, TieneCamaraReversa tieneCamaraReversa,
-            TieneAireAcondicionado tieneAireAcondicionado, TieneVelocidadCrucero tieneVelocidadCrucero,
-            TieneSensorColision tieneSensorColision, TIeneSensorCruzado tIeneSensorCruzado,
-            TieneAsistentePerCarril tieneAsistentePerCarril) {
-        super(marca, modelo, numPlaca, cambios, velocidadMaxima, cilindraje, fotos, tipoCombustible, tipoTrasmision, esNuevo,
-                tieneABS, disponibilidad, numPasajeros, numeroPuertas, numBolasAire, escuatroXCuatro, tieneCamaraReversa,
-                tieneAireAcondicionado, tieneVelocidadCrucero, tieneSensorColision, tIeneSensorCruzado,
-                tieneAsistentePerCarril);
-                this.capMaletero = capMaletero;
+    public enum TieneVelocidadCrucero {
+        SI, NO
+    };
+
+    TieneVelocidadCrucero tieneVelocidadCrucero;
+
+    public enum TieneSensorColision {
+        SI, NO
+    };
+
+    TieneSensorColision tieneSensorColision;
+
+    public enum TIeneSensorCruzado {
+        SI, NO
+    };
+
+    TIeneSensorCruzado tIeneSensorCruzado;
+
+    public enum TieneAsistentePerCarril {
+        SI, NO
+    };
+
+    TieneAsistentePerCarril tieneAsistentePerCarril;
+
+    public CamionetaSav(String marca, String modelo, String numPlaca, int cambios, int velocidadMaxima, int cilindraje,
+            int numerosPasajeros, int numeroPuertas, int numBolasAire, int capMaletero, String[] fotos,
+            TipoCombustible tipoCombustible,
+            TipoTrasmision tipoTrasmision, EsNuevo esNuevo, Disponibilidad disponibilidad,
+            TieneAireAcondicionado tieneAireAcondicionado, TieneCamaraReversa tieneCamaraReversa, TieneABS tieneABS,
+            EsCuatroxCuatro esCuatroxCuatro) {
+        super(marca, modelo, numPlaca, cambios, velocidadMaxima, cilindraje, numerosPasajeros, numeroPuertas,
+                numBolasAire,
+                fotos, tipoCombustible, tipoTrasmision, esNuevo, disponibilidad, tieneAireAcondicionado,
+                tieneCamaraReversa,
+                tieneABS, esCuatroxCuatro);
+        this.capMaletero = capMaletero;
     }
 
     @Override
     public String toString() {
-        String v = "Camioneta/Sav " + ", \nMarca: "
-                + getMarca() + ", \nModelo: "
-                + getModelo() + ", \nNumero Placa: "
-                + getNumPlaca() + ", \nCambios: "
-                + getCambios() + ", \nVelodidadMaxima: "
-                + getVelocidadMaxima() + ", \nCilindraje: "
-                + getCilindraje() + ", \nTipo Combustible: "
-                + getTipoCombustible() + ", \nTipo Trasmisión: "
-                + getTipoTrasmision() + "; \n Es nuevo: "
-                + getEsNuevo() + ", \nTiene ABS: "
-                + getTieneABS() + ", \nDisponibilidad: "
-                + getDisponibilidad() + ", \nNumero de pasajeros: "
-                + getNumPasajeros() + ", \nNumero de puertas: "
-                + getNumeroPuertas() + ",\nNumero de bolsas de aire: "
-                + getNumBolasAire() + ", \nCamara de Reversa: "
-                + getTieneCamaraReversa() + ", \nAire Acondicionado: "
-                + getTieneAireAcondicionado() + ", \nVelocidad Crucero: "
-                + getTieneVelocidadCrucero() + ", \nSensor Colisión: "
-                + getTieneSensorColision() + ", \nSensor Cruzado: "
-                + gettIeneSensorCruzado() + ", \nAsistente de Permanencia: "
-                + getTieneAsistentePerCarril() + ", \nCapacidad Maletero: "
-                + capMaletero;
-
+        String v = "Camioneta Sav" + ", \nMarca: " + getMarca() + ", \nModelo: " + getModelo() + ", \nNumero Placa: "
+                + getNumPlaca() + ", \nCambios: " + getCambios() + ", \nVelodidadMaxima: " + getVelocidadMaxima()
+                + ", \nCilindraje: " + getCilindraje() + ", \nNumeros de pasajeros: " + getNumerosPasajeros()
+                + ", \nNuermo de puertas: " + getNumeroPuertas() + ", \nNumero de bolsas de aire: " + getNumBolasAire()
+                + ", \nCapacidad maletero : " + capMaletero
+                + ", \nTipo Combustible: " + getTipoCombustible()
+                + ", \nTipo Trasmisión: " + getTipoTrasmision() + "; \n Es nuevo: " + getEsNuevo()
+                + ", \nDisponibilidad: " + getDisponibilidad() + ", \nCamara de reversa: " + getTieneCamaraReversa()
+                + ", \nAire acondicionado: " + getTieneAireAcondicionado() + ", \nVelocidad Crucero: "
+                + tieneVelocidadCrucero
+                + ", \nSensor de colisión: " + tieneSensorColision
+                + ", \nSensor cruzado: " + tIeneSensorCruzado + ",\nPermanencia de carril: " + tieneAsistentePerCarril
+                + ", \nABS: " + getTieneABS() + ", \nCuatro x Cuatro: " + getEsCuatroxCuatro();
         return v;
     }
-
-    
 
     public int getCapMaletero() {
         return capMaletero;
@@ -55,6 +67,36 @@ public class CamionetaSav extends AbsCamioneta{
         this.capMaletero = capMaletero;
     }
 
-    
-    
+    public TieneVelocidadCrucero getTieneVelocidadCrucero() {
+        return tieneVelocidadCrucero;
+    }
+
+    public void setTieneVelocidadCrucero(TieneVelocidadCrucero tieneVelocidadCrucero) {
+        this.tieneVelocidadCrucero = tieneVelocidadCrucero;
+    }
+
+    public TieneSensorColision getTieneSensorColision() {
+        return tieneSensorColision;
+    }
+
+    public void setTieneSensorColision(TieneSensorColision tieneSensorColision) {
+        this.tieneSensorColision = tieneSensorColision;
+    }
+
+    public TIeneSensorCruzado gettIeneSensorCruzado() {
+        return tIeneSensorCruzado;
+    }
+
+    public void settIeneSensorCruzado(TIeneSensorCruzado tIeneSensorCruzado) {
+        this.tIeneSensorCruzado = tIeneSensorCruzado;
+    }
+
+    public TieneAsistentePerCarril getTieneAsistentePerCarril() {
+        return tieneAsistentePerCarril;
+    }
+
+    public void setTieneAsistentePerCarril(TieneAsistentePerCarril tieneAsistentePerCarril) {
+        this.tieneAsistentePerCarril = tieneAsistentePerCarril;
+    }
+
 }

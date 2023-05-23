@@ -1,21 +1,10 @@
 package Model;
 
 public abstract class AbsCamioneta extends Vehiculo {
-    private int numPasajeros;
+
+    private int numerosPasajeros;
     private int numeroPuertas;
     private int numBolasAire;
-
-    public enum EscuatroXCuatro {
-        SI, NO
-    };
-
-    EscuatroXCuatro escuatroXCuatro;
-
-    public enum TieneCamaraReversa {
-        SI, NO
-    };
-
-    TieneCamaraReversa tieneCamaraReversa;
 
     public enum TieneAireAcondicionado {
         SI, NO
@@ -23,60 +12,47 @@ public abstract class AbsCamioneta extends Vehiculo {
 
     TieneAireAcondicionado tieneAireAcondicionado;
 
-    public enum TieneVelocidadCrucero {
+    public enum TieneCamaraReversa {
         SI, NO
     };
 
-    TieneVelocidadCrucero tieneVelocidadCrucero;
+    TieneCamaraReversa tieneCamaraReversa;
 
-    public enum TieneSensorColision {
+    public enum TieneABS {
         SI, NO
     };
 
-    TieneSensorColision tieneSensorColision;
+    TieneABS tieneABS;
 
-    public enum TIeneSensorCruzado {
+    public enum EsCuatroxCuatro {
         SI, NO
     };
 
-    TIeneSensorCruzado tIeneSensorCruzado;
-
-    public enum TieneAsistentePerCarril {
-        SI, NO
-    };
-
-    TieneAsistentePerCarril tieneAsistentePerCarril;
+    EsCuatroxCuatro esCuatroxCuatro;
 
     public AbsCamioneta(String marca, String modelo, String numPlaca, int cambios, int velocidadMaxima, int cilindraje,
+            int numerosPasajeros, int numeroPuertas, int numBolasAire,
             String[] fotos, TipoCombustible tipoCombustible, TipoTrasmision tipoTrasmision, EsNuevo esNuevo,
-            TieneABS tieneABS, Disponibilidad disponibilidad, int numPasajeros, int numeroPuertas, int numBolasAire,
-            EscuatroXCuatro escuatroXCuatro, TieneCamaraReversa tieneCamaraReversa,
-            TieneAireAcondicionado tieneAireAcondicionado, TieneVelocidadCrucero tieneVelocidadCrucero,
-            TieneSensorColision tieneSensorColision, TIeneSensorCruzado tIeneSensorCruzado,
-            TieneAsistentePerCarril tieneAsistentePerCarril) {
+            Disponibilidad disponibilidad, TieneAireAcondicionado tieneAireAcondicionado,
+            TieneCamaraReversa tieneCamaraReversa, TieneABS tieneABS, EsCuatroxCuatro esCuatroxCuatro) {
         super(marca, modelo, numPlaca, cambios, velocidadMaxima, cilindraje, fotos, tipoCombustible, tipoTrasmision,
-                esNuevo, tieneABS, disponibilidad);
-        this.numPasajeros = numPasajeros;
-        this.numeroPuertas = numeroPuertas;
-        this.numBolasAire = numBolasAire;
-        this.escuatroXCuatro = escuatroXCuatro;
-        this.tieneCamaraReversa = tieneCamaraReversa;
+                esNuevo,
+                disponibilidad);
         this.tieneAireAcondicionado = tieneAireAcondicionado;
-        this.tieneVelocidadCrucero = tieneVelocidadCrucero;
-        this.tieneSensorColision = tieneSensorColision;
-        this.tIeneSensorCruzado = tIeneSensorCruzado;
-        this.tieneAsistentePerCarril = tieneAsistentePerCarril;
+        this.tieneCamaraReversa = tieneCamaraReversa;
+        this.tieneABS = tieneABS;
+        this.esCuatroxCuatro = esCuatroxCuatro;
     }
 
     @Override
     public abstract String toString();
 
-    public int getNumPasajeros() {
-        return numPasajeros;
+    public int getNumerosPasajeros() {
+        return numerosPasajeros;
     }
 
-    public void setNumPasajeros(int numPasajeros) {
-        this.numPasajeros = numPasajeros;
+    public void setNumerosPasajeros(int numerosPasajeros) {
+        this.numerosPasajeros = numerosPasajeros;
     }
 
     public int getNumeroPuertas() {
@@ -95,12 +71,12 @@ public abstract class AbsCamioneta extends Vehiculo {
         this.numBolasAire = numBolasAire;
     }
 
-    public EscuatroXCuatro getEscuatroXCuatro() {
-        return escuatroXCuatro;
+    public TieneAireAcondicionado getTieneAireAcondicionado() {
+        return tieneAireAcondicionado;
     }
 
-    public void setEscuatroXCuatro(EscuatroXCuatro escuatroXCuatro) {
-        this.escuatroXCuatro = escuatroXCuatro;
+    public void setTieneAireAcondicionado(TieneAireAcondicionado tieneAireAcondicionado) {
+        this.tieneAireAcondicionado = tieneAireAcondicionado;
     }
 
     public TieneCamaraReversa getTieneCamaraReversa() {
@@ -111,45 +87,22 @@ public abstract class AbsCamioneta extends Vehiculo {
         this.tieneCamaraReversa = tieneCamaraReversa;
     }
 
-    public TieneAireAcondicionado getTieneAireAcondicionado() {
-        return tieneAireAcondicionado;
+    public TieneABS getTieneABS() {
+        return tieneABS;
     }
 
-    public void setTieneAireAcondicionado(TieneAireAcondicionado tieneAireAcondicionado) {
-        this.tieneAireAcondicionado = tieneAireAcondicionado;
+    public void setTieneABS(TieneABS tieneABS) {
+        this.tieneABS = tieneABS;
     }
 
-    public TieneVelocidadCrucero getTieneVelocidadCrucero() {
-        return tieneVelocidadCrucero;
+    public EsCuatroxCuatro getEsCuatroxCuatro() {
+        return esCuatroxCuatro;
     }
 
-    public void setTieneVelocidadCrucero(TieneVelocidadCrucero tieneVelocidadCrucero) {
-        this.tieneVelocidadCrucero = tieneVelocidadCrucero;
+    public void setEsCuatroxCuatro(EsCuatroxCuatro esCuatroxCuatro) {
+        this.esCuatroxCuatro = esCuatroxCuatro;
     }
 
-    public TieneSensorColision getTieneSensorColision() {
-        return tieneSensorColision;
-    }
-
-    public void setTieneSensorColision(TieneSensorColision tieneSensorColision) {
-        this.tieneSensorColision = tieneSensorColision;
-    }
-
-    public TIeneSensorCruzado gettIeneSensorCruzado() {
-        return tIeneSensorCruzado;
-    }
-
-    public void settIeneSensorCruzado(TIeneSensorCruzado tIeneSensorCruzado) {
-        this.tIeneSensorCruzado = tIeneSensorCruzado;
-    }
-
-    public TieneAsistentePerCarril getTieneAsistentePerCarril() {
-        return tieneAsistentePerCarril;
-    }
-
-    public void setTieneAsistentePerCarril(TieneAsistentePerCarril tieneAsistentePerCarril) {
-        this.tieneAsistentePerCarril = tieneAsistentePerCarril;
-    }
 
     
 

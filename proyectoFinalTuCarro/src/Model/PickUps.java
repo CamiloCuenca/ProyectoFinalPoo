@@ -1,61 +1,43 @@
 package Model;
 
 public class PickUps extends AbsCamioneta {
-    private int capacidadCajaCarga;
+    private int capacidadadCaja;
 
-    public PickUps(int capacidadCajaCarga, String marca, String modelo, String numPlaca, int cambios,
-            int velocidadMaxima,
-            int cilindraje,
-            String[] fotos, TipoCombustible tipoCombustible, TipoTrasmision tipoTrasmision, EsNuevo esNuevo,
-            TieneABS tieneABS, Disponibilidad disponibilidad, int numPasajeros, int numeroPuertas, int numBolasAire,
-            EscuatroXCuatro escuatroXCuatro, TieneCamaraReversa tieneCamaraReversa,
-            TieneAireAcondicionado tieneAireAcondicionado, TieneVelocidadCrucero tieneVelocidadCrucero,
-            TieneSensorColision tieneSensorColision, TIeneSensorCruzado tIeneSensorCruzado,
-            TieneAsistentePerCarril tieneAsistentePerCarril) {
-        super(marca, modelo, numPlaca, cambios, velocidadMaxima, cilindraje, fotos, tipoCombustible, tipoTrasmision,
-                esNuevo,
-                tieneABS, disponibilidad, numPasajeros, numeroPuertas, numBolasAire, escuatroXCuatro,
+    public PickUps(String marca, String modelo, String numPlaca, int cambios, int velocidadMaxima, int cilindraje,
+            int numerosPasajeros, int numeroPuertas, int numBolasAire, int capacidadadCaja, String[] fotos,
+            TipoCombustible tipoCombustible,
+            TipoTrasmision tipoTrasmision, EsNuevo esNuevo, Disponibilidad disponibilidad,
+            TieneAireAcondicionado tieneAireAcondicionado, TieneCamaraReversa tieneCamaraReversa, TieneABS tieneABS,
+            EsCuatroxCuatro esCuatroxCuatro) {
+        super(marca, modelo, numPlaca, cambios, velocidadMaxima, cilindraje, numerosPasajeros, numeroPuertas,
+                numBolasAire,
+                fotos, tipoCombustible, tipoTrasmision, esNuevo, disponibilidad, tieneAireAcondicionado,
                 tieneCamaraReversa,
-                tieneAireAcondicionado, tieneVelocidadCrucero, tieneSensorColision, tIeneSensorCruzado,
-                tieneAsistentePerCarril);
-        this.capacidadCajaCarga = capacidadCajaCarga;
-
+                tieneABS, esCuatroxCuatro);
+        this.capacidadadCaja = capacidadadCaja;
     }
 
     @Override
     public String toString() {
-        String v = "Camioneta/Sav " + ", \nMarca: "
-                + getMarca() + ", \nModelo: "
-                + getModelo() + ", \nNumero Placa: "
-                + getNumPlaca() + ", \nCambios: "
-                + getCambios() + ", \nVelodidadMaxima: "
-                + getVelocidadMaxima() + ", \nCilindraje: "
-                + getCilindraje() + ", \nTipo Combustible: "
-                + getTipoCombustible() + ", \nTipo Trasmisión: "
-                + getTipoTrasmision() + "; \n Es nuevo: "
-                + getEsNuevo() + ", \nTiene ABS: "
-                + getTieneABS() + ", \nDisponibilidad: "
-                + getDisponibilidad() + ", \nNumero de pasajeros: "
-                + getNumPasajeros() + ", \nNumero de puertas: "
-                + getNumeroPuertas() + ",\nNumero de bolsas de aire: "
-                + getNumBolasAire() + ", \nCamara de Reversa: "
-                + getTieneCamaraReversa() + ", \nAire Acondicionado: "
-                + getTieneAireAcondicionado() + ", \nVelocidad Crucero: "
-                + getTieneVelocidadCrucero() + ", \nSensor Colisión: "
-                + getTieneSensorColision() + ", \nSensor Cruzado: "
-                + gettIeneSensorCruzado() + ", \nAsistente de Permanencia: "
-                + getTieneAsistentePerCarril() + ", \nCapacidad Caja de Carga: "
-                + capacidadCajaCarga;
-
+        String v = "Camioneta Sav" + ", \nMarca: " + getMarca() + ", \nModelo: " + getModelo() + ", \nNumero Placa: "
+                + getNumPlaca() + ", \nCambios: " + getCambios() + ", \nVelodidadMaxima: " + getVelocidadMaxima()
+                + ", \nCilindraje: " + getCilindraje() + ", \nNumeros de pasajeros: " + getNumerosPasajeros()
+                + ", \nNuermo de puertas: " + getNumeroPuertas() + ", \nNumero de bolsas de aire: " + getNumBolasAire()
+                + ", \nCapacidad Caja de Carga : " + capacidadadCaja
+                + ", \nTipo Combustible: " + getTipoCombustible()
+                + ", \nTipo Trasmisión: " + getTipoTrasmision() + "; \n Es nuevo: " + getEsNuevo()
+                + ", \nDisponibilidad: " + getDisponibilidad() + ", \nCamara de reversa: " + getTieneCamaraReversa()
+                + ", \nAire acondicionado: " + getTieneAireAcondicionado()
+                + ", \nABS: " + getTieneABS() + ", \nCuatro x Cuatro: " + getEsCuatroxCuatro();
         return v;
     }
 
-    public int getCapacidadCajaCarga() {
-        return capacidadCajaCarga;
+    public int getCapacidadadCaja() {
+        return capacidadadCaja;
     }
 
-    public void setCapacidadCajaCarga(int capacidadCajaCarga) {
-        this.capacidadCajaCarga = capacidadCajaCarga;
+    public void setCapacidadadCaja(int capacidadadCaja) {
+        this.capacidadadCaja = capacidadadCaja;
     }
 
 }
