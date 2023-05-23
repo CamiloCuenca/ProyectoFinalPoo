@@ -15,6 +15,7 @@ import Model.Empleados;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import java.awt.Color;
 
 public class registrar extends JFrame implements ActionListener{
 
@@ -56,53 +57,63 @@ public class registrar extends JFrame implements ActionListener{
 		contentPane.setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("Nombre");
-		lblNewLabel.setBounds(207, 91, 49, 14);
+		lblNewLabel.setBounds(303, 91, 49, 14);
 		contentPane.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("Apellido");
-		lblNewLabel_1.setBounds(207, 135, 63, 14);
+		lblNewLabel_1.setBounds(303, 135, 63, 14);
 		contentPane.add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("Cedula");
-		lblNewLabel_2.setBounds(207, 178, 83, 14);
+		lblNewLabel_2.setBounds(303, 182, 83, 14);
 		contentPane.add(lblNewLabel_2);
 		
 		JLabel lblNewLabel_3 = new JLabel("Correo");
-		lblNewLabel_3.setBounds(207, 227, 63, 14);
+		lblNewLabel_3.setBounds(303, 231, 63, 14);
 		contentPane.add(lblNewLabel_3);
 		
 		JLabel lblNewLabel_4 = new JLabel("contraseña");
-		lblNewLabel_4.setBounds(207, 286, 63, 14);
+		lblNewLabel_4.setBounds(303, 284, 63, 14);
 		contentPane.add(lblNewLabel_4);
 		
 		txtNombre = new JTextField();
-		txtNombre.setBounds(289, 88, 298, 20);
+		txtNombre.setBounds(383, 88, 298, 20);
 		contentPane.add(txtNombre);
 		txtNombre.setColumns(10);
 		
 		txtApellido = new JTextField();
-		txtApellido.setBounds(289, 132, 298, 20);
+		txtApellido.setBounds(383, 132, 298, 20);
 		contentPane.add(txtApellido);
 		txtApellido.setColumns(10);
 		
 		txtCedula = new JTextField();
-		txtCedula.setBounds(289, 175, 298, 20);
+		txtCedula.setBounds(383, 179, 298, 20);
 		contentPane.add(txtCedula);
 		txtCedula.setColumns(10);
 		
 		txtCorreo = new JTextField();
-		txtCorreo.setBounds(289, 224, 298, 20);
+		txtCorreo.setBounds(383, 228, 298, 20);
 		contentPane.add(txtCorreo);
 		txtCorreo.setColumns(10);
 		
 		txtContrasena = new JTextField();
-		txtContrasena.setBounds(289, 283, 298, 20);
+		txtContrasena.setBounds(383, 281, 298, 20);
 		contentPane.add(txtContrasena);
 		txtContrasena.setColumns(10);
 		
 		btnRegistrar = new JButton("Registrar");
-		btnRegistrar.setBounds(374, 373, 89, 23);
+		btnRegistrar.setBounds(464, 374, 89, 23);
 		contentPane.add(btnRegistrar);
+		
+		JPanel panel = new JPanel();
+		panel.setLayout(null);
+		panel.setBackground(Color.RED);
+		panel.setBounds(0, 0, 239, 556);
+		contentPane.add(panel);
+		
+		JLabel lblLogo = new JLabel("");
+		lblLogo.setBounds(612, 324, 224, 203);
+		contentPane.add(lblLogo);
 	}
 
 	@Override
