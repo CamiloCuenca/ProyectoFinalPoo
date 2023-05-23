@@ -2,14 +2,14 @@ package Model;
 
 public abstract class Persona {
 
-	//Atributos
-	private String nombre ;
+	// Atributos
+	private String nombre;
 	private String apellido;
-	private String cedula ;
-	private String correo ;
-	private String contraseña ;
-	
-	//Constructor
+	private String cedula;
+	private String correo;
+	private String contraseña;
+
+	// Constructor
 	public Persona(String nombre, String apellido, String cedula, String correo, String contraseña) {
 		super();
 		this.nombre = nombre;
@@ -18,21 +18,12 @@ public abstract class Persona {
 		this.correo = correo;
 		this.contraseña = contraseña;
 	}
-	
 
-
-
-	//Get and Set
-
-	
-
+	// Get and Set
 
 	public Persona() {
 		// TODO Auto-generated constructor stub
 	}
-
-
-
 
 	public String getNombre() {
 		return nombre;
@@ -46,21 +37,17 @@ public abstract class Persona {
 		return apellido;
 	}
 
-
 	public void setApellido(String apellido) {
 		this.apellido = apellido;
 	}
-
 
 	public String getCedula() {
 		return cedula;
 	}
 
-
 	public void setCedula(String cedula) {
 		this.cedula = cedula;
 	}
-
 
 	public String getCorreo() {
 		return correo;
@@ -77,7 +64,6 @@ public abstract class Persona {
 	public void setContraseña(String contraseña) {
 		this.contraseña = contraseña;
 	}
-
 
 	@Override
 	public String toString() {

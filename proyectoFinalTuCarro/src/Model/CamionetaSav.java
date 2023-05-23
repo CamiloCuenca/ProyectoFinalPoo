@@ -1,6 +1,7 @@
 package Model;
 
 public class CamionetaSav extends AbsCamioneta {
+    // Atributos
     private int capMaletero;
 
     public enum TieneVelocidadCrucero {
@@ -27,6 +28,7 @@ public class CamionetaSav extends AbsCamioneta {
 
     TieneAsistentePerCarril tieneAsistentePerCarril;
 
+    // Constructor
     public CamionetaSav(String marca, String modelo, String numPlaca, int cambios, int velocidadMaxima, int cilindraje,
             int numerosPasajeros, int numeroPuertas, int numBolasAire, int capMaletero, String[] fotos,
             TipoCombustible tipoCombustible,
@@ -41,6 +43,7 @@ public class CamionetaSav extends AbsCamioneta {
         this.capMaletero = capMaletero;
     }
 
+    // Metodo imprimir
     @Override
     public String toString() {
         String v = "Camioneta Sav" + ", \nMarca: " + getMarca() + ", \nModelo: " + getModelo() + ", \nNumero Placa: "
@@ -59,6 +62,7 @@ public class CamionetaSav extends AbsCamioneta {
         return v;
     }
 
+    // GETTERS Y SETTRES
     public int getCapMaletero() {
         return capMaletero;
     }

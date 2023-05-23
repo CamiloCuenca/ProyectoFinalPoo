@@ -1,9 +1,11 @@
 package Model;
 
 public class Deportivo extends AbsAutomovil {
+    // Atributos
     private int caballosDeFuerza;
     private double tiempo100kl;
 
+    // Constructor
     public Deportivo(String marca, String modelo, String numPlaca, int cambios, int velocidadMaxima, int cilindraje,
             int numerosPasajeros, int numeroPuertas, int numBolasAire, int caballosDeFuerza, double tiempo100kl,
             String[] fotos, TipoCombustible tipoCombustible,
@@ -15,6 +17,7 @@ public class Deportivo extends AbsAutomovil {
         this.tiempo100kl = tiempo100kl;
     }
 
+    // Metodo imprimir
     @Override
     public String toString() {
         String v = "Deportivo" + ", \nMarca: " + getMarca() + ", \nModelo: " + getModelo() + ", \nNumero Placa: "
@@ -28,6 +31,7 @@ public class Deportivo extends AbsAutomovil {
         return v;
     }
 
+    // GETTRES Y SETTERS
     public int getCaballosDeFuerza() {
         return caballosDeFuerza;
     }

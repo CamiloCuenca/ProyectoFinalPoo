@@ -1,6 +1,7 @@
 package Model;
 
 public class Van extends AbsAutomovil {
+    // Atributos
     private int capdMaletero;
 
     public enum TieneAireAcondicionado {
@@ -21,6 +22,7 @@ public class Van extends AbsAutomovil {
 
     TieneABS tieneABS;
 
+    // Constructor
     public Van(String marca, String modelo, String numPlaca, int cambios, int velocidadMaxima, int cilindraje,
             int numerosPasajeros, int numeroPuertas, int numBolasAire, int capMaletero, String[] fotos,
             TipoCombustible tipoCombustible,
@@ -36,6 +38,7 @@ public class Van extends AbsAutomovil {
 
     }
 
+    // Metodo imprimir
     @Override
     public String toString() {
         String v = "Sedan " + ", \nMarca: " + getMarca() + ", \nModelo: " + getModelo() + ", \nNumero Placa: "
@@ -51,6 +54,7 @@ public class Van extends AbsAutomovil {
         return v;
     }
 
+    // GETTERS Y SETTERS
     public int getCapdMaletero() {
         return capdMaletero;
     }
@@ -82,7 +86,5 @@ public class Van extends AbsAutomovil {
     public void setTieneABS(TieneABS tieneABS) {
         this.tieneABS = tieneABS;
     }
-
-    
 
 }

@@ -1,8 +1,10 @@
 package Model;
 
 public class PickUps extends AbsCamioneta {
+    // Atributos
     private int capacidadadCaja;
 
+    // Constructor
     public PickUps(String marca, String modelo, String numPlaca, int cambios, int velocidadMaxima, int cilindraje,
             int numerosPasajeros, int numeroPuertas, int numBolasAire, int capacidadadCaja, String[] fotos,
             TipoCombustible tipoCombustible,
@@ -17,6 +19,7 @@ public class PickUps extends AbsCamioneta {
         this.capacidadadCaja = capacidadadCaja;
     }
 
+    // Metodo imprimir
     @Override
     public String toString() {
         String v = "Camioneta Sav" + ", \nMarca: " + getMarca() + ", \nModelo: " + getModelo() + ", \nNumero Placa: "
@@ -32,6 +35,7 @@ public class PickUps extends AbsCamioneta {
         return v;
     }
 
+    // GETTERS Y SETTERS
     public int getCapacidadadCaja() {
         return capacidadadCaja;
     }

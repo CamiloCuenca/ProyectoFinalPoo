@@ -1,7 +1,7 @@
 package Model;
 
 public abstract class AbsCamioneta extends Vehiculo {
-
+    // Atributos
     private int numerosPasajeros;
     private int numeroPuertas;
     private int numBolasAire;
@@ -30,6 +30,7 @@ public abstract class AbsCamioneta extends Vehiculo {
 
     EsCuatroxCuatro esCuatroxCuatro;
 
+    // Contructor
     public AbsCamioneta(String marca, String modelo, String numPlaca, int cambios, int velocidadMaxima, int cilindraje,
             int numerosPasajeros, int numeroPuertas, int numBolasAire,
             String[] fotos, TipoCombustible tipoCombustible, TipoTrasmision tipoTrasmision, EsNuevo esNuevo,
@@ -44,9 +45,11 @@ public abstract class AbsCamioneta extends Vehiculo {
         this.esCuatroxCuatro = esCuatroxCuatro;
     }
 
+    // Metodo imprimir
     @Override
     public abstract String toString();
 
+    // SETTERS Y GETTERS
     public int getNumerosPasajeros() {
         return numerosPasajeros;
     }
@@ -102,8 +105,5 @@ public abstract class AbsCamioneta extends Vehiculo {
     public void setEsCuatroxCuatro(EsCuatroxCuatro esCuatroxCuatro) {
         this.esCuatroxCuatro = esCuatroxCuatro;
     }
-
-
-    
 
 }

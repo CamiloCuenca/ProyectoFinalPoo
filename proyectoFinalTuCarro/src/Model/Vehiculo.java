@@ -3,6 +3,7 @@ package Model;
 import java.util.Arrays;
 
 public abstract class Vehiculo {
+    // Atributos clase padre
     private String marca;
     private String modelo;
     private String numPlaca;
@@ -35,8 +36,7 @@ public abstract class Vehiculo {
 
     Disponibilidad disponibilidad;
 
-    
-
+    // Constructor
     public Vehiculo(String marca, String modelo, String numPlaca, int cambios, int velocidadMaxima, int cilindraje,
             String[] fotos, TipoCombustible tipoCombustible, TipoTrasmision tipoTrasmision, EsNuevo esNuevo,
             Disponibilidad disponibilidad) {
@@ -53,9 +53,11 @@ public abstract class Vehiculo {
         this.disponibilidad = disponibilidad;
     }
 
+    // Metodo imprimir
     @Override
     public abstract String toString();
 
+    // GETTERS Y SETTRES
     public String getMarca() {
         return marca;
     }

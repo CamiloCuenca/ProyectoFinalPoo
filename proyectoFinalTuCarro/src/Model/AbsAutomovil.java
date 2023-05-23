@@ -1,10 +1,12 @@
 package Model;
 
 public abstract class AbsAutomovil extends Vehiculo {
+    // Atributos
     private int numerosPasajeros;
     private int numeroPuertas;
     private int numBolasAire;
 
+    // Contructor
     public AbsAutomovil(String marca, String modelo, String numPlaca, int cambios, int velocidadMaxima, int cilindraje,
             int numerosPasajeros, int numeroPuertas, int numBolasAire,
             String[] fotos, TipoCombustible tipoCombustible, TipoTrasmision tipoTrasmision, EsNuevo esNuevo,
@@ -14,9 +16,11 @@ public abstract class AbsAutomovil extends Vehiculo {
                 disponibilidad);
     }
 
+    // Metodo imprimir
     @Override
     public abstract String toString();
 
+    // SETTERS Y GETTERS
     public int getNumerosPasajeros() {
         return numerosPasajeros;
     }

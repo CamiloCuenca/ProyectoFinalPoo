@@ -1,8 +1,10 @@
 package Model;
 
-public abstract class AbsVehiculoCarga extends Vehiculo{
+public abstract class AbsVehiculoCarga extends Vehiculo {
+    // Atributos
     private int numEjes;
     private int numBolasAire;
+
     public enum TieneAireAcondicionado {
         SI, NO
     };
@@ -15,21 +17,25 @@ public abstract class AbsVehiculoCarga extends Vehiculo{
 
     TieneABS tieneABS;
 
-
-    public AbsVehiculoCarga(String marca, String modelo, String numPlaca, int cambios, int velocidadMaxima, int cilindraje, int numEjes, int numBolasAire,
+    // Constructor
+    public AbsVehiculoCarga(String marca, String modelo, String numPlaca, int cambios, int velocidadMaxima,
+            int cilindraje, int numEjes, int numBolasAire,
             String[] fotos, TipoCombustible tipoCombustible, TipoTrasmision tipoTrasmision, EsNuevo esNuevo,
-            Disponibilidad disponibilidad,TieneAireAcondicionado tieneAireAcondicionado, TieneABS tieneABS) {
-        super(marca, modelo, numPlaca, cambios, velocidadMaxima, cilindraje, fotos, tipoCombustible, tipoTrasmision, esNuevo,
+            Disponibilidad disponibilidad, TieneAireAcondicionado tieneAireAcondicionado, TieneABS tieneABS) {
+        super(marca, modelo, numPlaca, cambios, velocidadMaxima, cilindraje, fotos, tipoCombustible, tipoTrasmision,
+                esNuevo,
                 disponibilidad);
-                this.numEjes = numEjes;
-                this.numBolasAire = numBolasAire;
-                this.tieneAireAcondicionado = tieneAireAcondicionado;
-                this.tieneABS = tieneABS;
+        this.numEjes = numEjes;
+        this.numBolasAire = numBolasAire;
+        this.tieneAireAcondicionado = tieneAireAcondicionado;
+        this.tieneABS = tieneABS;
     }
 
+    // Metodo imprimir
     @Override
     public abstract String toString();
 
+    // GETTERS Y SETTERS
     public int getNumEjes() {
         return numEjes;
     }
@@ -62,7 +68,4 @@ public abstract class AbsVehiculoCarga extends Vehiculo{
         this.tieneABS = tieneABS;
     }
 
-
-    
-    
 }

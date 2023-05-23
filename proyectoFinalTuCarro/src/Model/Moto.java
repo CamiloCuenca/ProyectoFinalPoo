@@ -2,6 +2,7 @@ package Model;
 
 public class Moto extends Vehiculo {
 
+    // Constructor
     public Moto(String marca, String modelo, String numPlaca, int cambios, int velocidadMaxima, int cilindraje,
             String[] fotos, TipoCombustible tipoCombustible, TipoTrasmision tipoTrasmision, EsNuevo esNuevo,
             Disponibilidad disponibilidad) {
@@ -10,6 +11,7 @@ public class Moto extends Vehiculo {
                 disponibilidad);
     }
 
+    // Metodo imprimir
     @Override
     public String toString() {
         String v = "Moto" + ", \nMarca: "

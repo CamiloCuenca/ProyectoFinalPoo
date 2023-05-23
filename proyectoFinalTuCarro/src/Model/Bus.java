@@ -1,6 +1,7 @@
 package Model;
 
 public class Bus extends AbsVehiculoCarga {
+    // Atributos
     private int capdMaletero;
     private int numerosPasajeros;
     private int numeroPuertas;
@@ -12,6 +13,7 @@ public class Bus extends AbsVehiculoCarga {
 
     TieneCamaraReversa tieneCamaraReversa;
 
+    // Contructor
     public Bus(String marca, String modelo, String numPlaca, int cambios, int velocidadMaxima, int cilindraje,
             int capdMaletero, int numerosPasajeros, int numeroPuertas, int numSalidasEm,
             int numEjes, int numBolasAire, String[] fotos, TipoCombustible tipoCombustible,
@@ -28,6 +30,7 @@ public class Bus extends AbsVehiculoCarga {
 
     }
 
+    // Metodo imprimir
     @Override
     public String toString() {
         String v = " Bus " + ", \nMarca: " + getMarca() + ", \nModelo: " + getModelo() + ", \nNumero Placa: "
@@ -35,7 +38,7 @@ public class Bus extends AbsVehiculoCarga {
                 + ", \nCilindraje: " + getCilindraje() + ", \nNumeros de pasajeros: " + numerosPasajeros
                 + ", \nNuermo de puertas: " + numeroPuertas + ", \nSalidas de emergencia: " + numSalidasEm
                 + ", \nNumero de bolsas de aire: " + getNumBolasAire()
-                + ", \nCapacidad maletero : " + capdMaletero + ", \nEjes: " +getNumEjes() 
+                + ", \nCapacidad maletero : " + capdMaletero + ", \nEjes: " + getNumEjes()
                 + ", \nTipo Combustible: " + getTipoCombustible()
                 + ", \nTipo Trasmisión: " + getTipoTrasmision() + "; \n Es nuevo: " + getEsNuevo()
                 + ", \nDisponibilidad: " + getDisponibilidad() + ", \nCamara de reversa: " + tieneCamaraReversa
@@ -44,6 +47,7 @@ public class Bus extends AbsVehiculoCarga {
         return v;
     }
 
+    // GETTERS Y SETTRES
     public int getCapdMaletero() {
         return capdMaletero;
     }
@@ -83,7 +87,5 @@ public class Bus extends AbsVehiculoCarga {
     public void setTieneCamaraReversa(TieneCamaraReversa tieneCamaraReversa) {
         this.tieneCamaraReversa = tieneCamaraReversa;
     }
-
-    
 
 }
